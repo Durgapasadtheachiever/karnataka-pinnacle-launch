@@ -2,6 +2,7 @@ import { ArrowRight, Award, MapPin, Users, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-building.jpg";
+import broucherKp from "@/assets/broucher.jpg"
 
 const HeroSection = () => {
   return (
@@ -55,8 +56,8 @@ const HeroSection = () => {
               size="xl"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/brochure/karnataka-properties-brochure.pdf';
-                link.download = 'Karnataka-Properties-Brochure.pdf';
+                link.href = broucherKp;
+                link.download = 'Karnataka-Properties-Brochure';
                 link.click();
               }}
             >
