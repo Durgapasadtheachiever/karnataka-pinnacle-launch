@@ -197,6 +197,7 @@ const Footer = () => {
           size="icon"
           className="w-14 h-14 rounded-full shadow-luxury animate-float"
           aria-label="Chat on WhatsApp"
+          onClick={() => window.open('https://wa.me/919876543210?text=Hi! I am interested in Karnataka Properties. Please share more details.', '_blank')}
         >
           <MessageCircle className="h-6 w-6" />
         </Button>

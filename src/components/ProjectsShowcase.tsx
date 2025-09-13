@@ -1,4 +1,5 @@
 import { MapPin, ArrowRight, Home, Building2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import villaProject from "@/assets/villa-project.jpg";
@@ -114,10 +115,12 @@ const ProjectsShowcase = () => {
                     <p className="text-sm text-muted-foreground">Starting from</p>
                     <p className="text-lg font-bold text-accent-gold">{project.startingPrice}</p>
                   </div>
-                  <Button variant="premium" size="sm" className="group">
-                    View Details
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <Link to={`/project/${project.id}`}>
+                    <Button variant="premium" size="sm" className="group">
+                      View Details
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -126,10 +129,12 @@ const ProjectsShowcase = () => {
 
         {/* View All Projects Button */}
         <div className="text-center mt-12">
-          <Button variant="elegant" size="xl" className="group">
-            View All Projects
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/projects">
+            <Button variant="elegant" size="xl" className="group">
+              View All Projects
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

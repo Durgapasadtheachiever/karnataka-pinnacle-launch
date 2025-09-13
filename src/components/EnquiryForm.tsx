@@ -209,7 +209,7 @@ const EnquiryForm = () => {
                       type="submit" 
                       variant="hero" 
                       size="lg" 
-                      className="flex-1 group"
+                      className="flex-1 group sm:h-10 h-14 sm:text-sm text-base"
                     >
                       Send Enquiry
                       <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -219,7 +219,8 @@ const EnquiryForm = () => {
                       type="button" 
                       variant="luxury" 
                       size="lg"
-                      className="flex-1"
+                      className="flex-1 sm:h-10 h-14 sm:text-sm text-base"
+                      onClick={() => window.open('tel:+919876543210')}
                     >
                       <Phone className="mr-2 h-4 w-4" />
                       Call Now

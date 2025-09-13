@@ -1,4 +1,5 @@
 import { ArrowRight, Award, MapPin, Users, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-building.jpg";
 
@@ -43,11 +44,22 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-            <Button variant="hero" size="xl" className="group">
-              Schedule Site Visit
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="luxury" size="xl">
+            <Link to="/site-visit">
+              <Button variant="hero" size="xl" className="group">
+                Schedule Site Visit
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Button 
+              variant="luxury" 
+              size="xl"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/brochure/karnataka-properties-brochure.pdf';
+                link.download = 'Karnataka-Properties-Brochure.pdf';
+                link.click();
+              }}
+            >
               Download Brochure
             </Button>
           </div>
